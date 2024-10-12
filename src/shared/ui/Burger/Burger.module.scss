@@ -1,0 +1,30 @@
+.burger {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.burger span {
+    width: 100%;
+    height: 3px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.burger span:last-child {
+    margin-top: 10px;
+}
+
+.burger.collapsed span:first-child {
+    transform: rotate(50deg);
+}
+
+.burger.collapsed span:last-child {
+    transform: rotate(-50deg);
+    margin-top: 0;
+}
