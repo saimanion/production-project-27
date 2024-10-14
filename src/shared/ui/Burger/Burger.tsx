@@ -7,12 +7,9 @@ interface BurgerProps {
     isCollapsed: boolean;
 }
 
-export const Burger:FC<BurgerProps> = ({ className, isCollapsed }) => {
-    console.log(isCollapsed);
-    return (
-        <div className={classNames(cls.burger, { [cls.collapsed]: !isCollapsed }, [className])}>
-            <span />
-            <span />
-        </div>
-    );
-};
+export const Burger:FC<BurgerProps> = ({ className, isCollapsed }) => (
+    <div className={classNames(cls.burger, { [cls.collapsed]: !isCollapsed }, [className])}>
+        <span />
+        <span />
+    </div>
+);

@@ -32,6 +32,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 theme={ThemeButton.CLEAR}
                 onClick={onToggle}
                 className={classNames(cls.btn)}
+                data-testid="sidebar-toggle"
             >
                 <Burger isCollapsed={collapsed} />
             </Button>
