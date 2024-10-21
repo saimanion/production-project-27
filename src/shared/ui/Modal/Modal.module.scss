@@ -1,0 +1,53 @@
+
+
+
+.Modal{
+  position: fixed;
+  left: 0;
+  top: 0;
+
+
+  color: var(--inverted-primary-color);
+
+  width: 100%;
+  height: 100%;
+
+
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-hover);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content{
+  max-width: var(--modal-max-width);
+  background: var(--inverted-bg-color);
+  border-radius: var(--modal-border-radius);
+  padding: var(--modal-padding);
+
+  transition: transform .3s;
+  transform: scale(0.5);
+
+}
+.opened{
+  opacity: 1;
+  pointer-events: auto;
+  user-select: auto;
+  z-index: var(--z-index-modal);
+  .content{
+    transform: scale(1);
+  }
+}
+
+.isClosing{
+  .content{
+    transform: scale(0.2);
+  }
+}
