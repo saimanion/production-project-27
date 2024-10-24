@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
 import React, { useState } from 'react';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { LoginModal } from 'feature/authByUserName/ui';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -14,9 +15,7 @@ export const Navbar = ({ className }: NavbarProps) => {
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <div className={cls.links}>
-                <Modal isOpen={isModalOpen} onClose={() => { setIsModalOpen(false); }}>
-                    <p>Залогируйся бырзо о                     о оо о оо о  оо о оо </p>
-                </Modal>
+                <LoginModal isOpen={isModalOpen} onClose={() => { setIsModalOpen(false); }} />
                 <Button
                     theme={ThemeButton.CLEAR_INVERTED}
                     onClick={() => { setIsModalOpen((prev) => !prev); }}

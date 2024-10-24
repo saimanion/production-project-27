@@ -33,6 +33,7 @@
     flex-direction: column;
     margin-left: 10px;
     gap: 10px;
+
 }
 
 .item {
@@ -42,7 +43,10 @@
 }
 
 .link {
+
     margin-left: 10px;
+    // Чтобы не прыгали иконки width: 1px;
+    //width: 1px;
 }
 
 .icon {
